@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - AutoGear</title>
+    <style>
+      :root {
+        --primary-color: #1e2a38;
+        --secondary-color: #ffd700;
+        --background-color: #f4f4f4;
+        --text-color: #333;
+        --accent-color: #f9f9f9;
+        --highlight-color: #4caf50;
+      }
+
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #3a6ea5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        color: #ffffff;
+      }
+      .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffd700;
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar ul li {
+        margin: 0 20px;
+      }
+      .navbar ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+      }
+      .navbar ul li a.active {
+        border-bottom: 2px solid #ffd700;
+      }
+      .navbar .search-bar {
+        flex-grow: 1;
+        margin: 0 20px;
+      }
+      .navbar .search-bar input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      .navbar .search-bar button {
+        padding: 10px;
+        background-color: #1abc9c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* Header */
+      header {
+        background: url("https://source.unsplash.com/1600x600/?car,auto")
+          no-repeat center center/cover;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+      }
+
+      header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h2 {
+        color: var(--primary-color);
+        font-size: 28px;
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      h2:after {
+        content: "";
+        width: 50px;
+        height: 4px;
+        background-color: var(--secondary-color);
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+      }
+
+      /* Content Section */
+      .content-section {
+        background-color: var(--accent-color);
+        padding: 40px 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+      }
+
+      .content-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      ul li {
+        padding: 10px 0;
+        font-size: 16px;
+        position: relative;
+        padding-left: 25px;
+        margin-left: 10px;
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start Header/Navigation -->
+    <div class="navbar">
+      <div class="logo">AutoGear</div>
+      <ul>
+        <li>
+          <a href="index.html"> Home </a>
+        </li>
+        <li>
+          <a href="User/view_products.php"> Shop </a>
+        </li>
+        <li>
+          <a class="active" href="#"> About Us </a>
+        </li>
+        <li>
+          <a href="services.php"> Services </a>
+        </li>
+        <li>
+          <a href="contactus.php"> Contact Us </a>
+        </li>
+      </ul>
+      <div class="icons">
+        <a href="redirect.php" title="Profile">
+          <i class="fas fa-user"></i>
+        </a>
+        <a href="User/cart.php" title="Shopping Cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="Login-Signup/logout.php" title="Logout">
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </div>
+    </div>
+    <!-- End Header/Navigation -->
+
+    <header>
+      <h1>Welcome to AutoGear</h1>
+    </header>
+
+    <div class="container">
+      <div class="content-section">
+        <h2>Our Story</h2>
+        <p>
+          Founded in <strong>2024</strong>, AutoGear started with a simple goal:
+          to provide car lovers and everyday drivers with the best accessories
+          that improve both the performance and appearance of their vehicles.
+          Our journey began in a small shop, and over the years, we have grown
+          into one of the leading online retailers for car accessories, thanks
+          to our commitment to quality and customer satisfaction.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>What We Offer</h2>
+        <p>
+          At AutoGear, we strive to bring you the latest and most reliable car
+          accessories, ranging from performance-enhancing parts to safety
+          upgrades and stylish add-ons. Our diverse collection includes:
+        </p>
+        <ul>
+          <li>
+            <strong>Car Interior Accessories</strong>: Seat covers, floor mats,
+            steering wheel covers, organizers, and more.
+          </li>
+          <li>
+            <strong>Car Exterior Accessories</strong>: Custom headlights,
+            spoilers, roof racks, car covers, and body kits.
+          </li>
+          <li>
+            <strong>Performance Upgrades</strong>: Exhaust systems, air filters,
+            performance brakes, and more.
+          </li>
+          <li>
+            <strong>Car Care Products</strong>: Polishes, waxes, cleaning tools,
+            and detailing kits.
+          </li>
+          <li>
+            <strong>Electronic Gadgets</strong>: Dash cams, GPS systems, stereo
+            upgrades, and Bluetooth devices.
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h2>Why Choose AutoGear?</h2>
+        <p>
+          Here are a few reasons why AutoGear is your best choice for car
+          accessories:
+        </p>
+        <ul>
+          <li>
+            <strong>Quality Products</strong>: We partner with trusted brands
+            and manufacturers to bring you products that meet the highest
+            standards.
+          </li>
+          <li>
+            <strong>Affordable Prices</strong>: At AutoGear, we believe that
+            quality doesn’t have to come at a premium. We offer competitive
+            pricing on all our products.
+          </li>
+          <li>
+            <strong>Exceptional Customer Service</strong>: Our dedicated support
+            team is always ready to assist you with any queries or concerns,
+            ensuring a smooth shopping experience.
+          </li>
+          <li>
+            <strong>Fast Shipping</strong>: We know you're excited to receive
+            your new accessories, which is why we offer quick and reliable
+            shipping options to get them to you as soon as possible.
+          </li>
+          <li>
+            <strong>Hassle-Free Returns</strong>: If you’re not completely
+            satisfied with your purchase, we offer easy returns to ensure you
+            get exactly what you want.
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission at AutoGear is simple: to provide top-quality car
+          accessories that enhance your driving experience while making your car
+          look great. We’re committed to ensuring that you can find exactly what
+          you need for your vehicle, and we aim to exceed your expectations with
+          every purchase.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2>Join the AutoGear Family</h2>
+        <p>
+          At AutoGear, we don’t just sell car accessories – we build a community
+          of car enthusiasts and drivers who share a love for their vehicles.
+          Join the AutoGear family and let us help you upgrade, protect, and
+          customize your car. Whether you're a daily commuter, weekend warrior,
+          or off-road adventurer, we have something for everyone.
+        </p>
+        <p>
+          Thank you for choosing AutoGear. Your journey starts here, and we’re
+          excited to be part of it.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

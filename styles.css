@@ -1,0 +1,290 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #3a6ea5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #ffffff;
+}
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffd700;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
+  margin: 0 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.navbar ul li a.active {
+  border-bottom: 2px solid #ffd700;
+}
+.navbar .icons {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+.navbar .icons i {
+  font-size: 20px;
+  margin-left: 20px;
+  color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+  color: #ffffff;
+  background-color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #cfd8dc;
+}
+.hero .content {
+  max-width: 50%;
+}
+.hero .content p {
+  font-size: 18px;
+  margin: 0 0 30px;
+  color: #b0b0b0;
+}
+.hero .buttons {
+  display: flex;
+}
+.hero .buttons a {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.hero .shop-now {
+  background-color: #ffd700;
+  color: #2f4f4f;
+  transition: color 0.3s;
+}
+.hero .explore {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+.hero .shop-now:hover {
+  background-color: #2f4f4f;
+  color: #ffd700;
+}
+.hero img {
+  max-width: 600px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+/* Product Section */
+.product-container {
+  background-color: #f5f9fa;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-container .left-section {
+  max-width: 50%;
+}
+.product-container h1 {
+  font-size: 36px;
+  color: #333;
+}
+.product-container p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+.explore-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  transition: 0.5s;
+  width: 200px;
+}
+.card:hover {
+  transform: translateY(-20px);
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card h3 {
+  font-size: 18px;
+  color: #3a6ea5;
+  margin-top: 15px;
+}
+.card span {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.card .sci {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .sci li {
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card .sci li a {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.card .sci li a:hover {
+  color: #000000;
+}
+/* Why Choose Us Section */
+.why-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f0f4f5;
+}
+.why-container .why-content {
+  max-width: 50%;
+}
+.why-content h1 {
+  font-size: 36px;
+  color: #333;
+}
+.why-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+.feature i {
+  font-size: 40px;
+  color: #333;
+  margin-right: 15px;
+  background-color: #e0e7e9;
+  border-radius: 50%;
+  padding: 10px;
+}
+.feature h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+.feature p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+.why-container .image-container img {
+  max-width: 500px;
+  border-radius: 15px;
+}
+
+/* Help Section */
+.help-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+}
+.help-container .left-section img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 10px;
+}
+.help-container .right-section {
+  max-width: 50%;
+}
+.help-container h1 {
+  font-size: 36px;
+  color: #333;
+}
+.help-container p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}

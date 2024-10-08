@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- coding by @_.codedevotee -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Register Form</title>
+
+    <!--Boxicons CDN-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <!-- FOR SOURCE CODE COMMENT "CODE" -->
+
+    <div class="wrapper">
+      <span class="rotate-bg"></span>
+      <span class="rotate-bg2"></span>
+
+      <!-- Login Form -->
+      <div class="form-box login">
+        <h2 class="title animation" style="--i: 0; --j: 21">Login</h2>
+        <form
+          action="login.php"
+          method="POST"
+          onsubmit="return validateLoginForm()"
+        >
+          <!-- Added onsubmit event -->
+
+          <div class="input-box animation" style="--i: 1; --j: 22">
+            <input type="email" name="email" required />
+            <!-- Email type provides automatic validation -->
+            <label for="">Email</label>
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box animation" style="--i: 2; --j: 23">
+            <input type="password" name="password" minlength="6" required />
+            <!-- Added minlength validation -->
+            <label for="">Password</label>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+
+          <button type="submit" class="btn animation" style="--i: 3; --j: 24">
+            Login
+          </button>
+          <div class="linkTxt animation" style="--i: 5; --j: 25">
+            <p>
+              Don't have an account?
+              <a href="#" class="register-link">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="info-text login">
+        <h2 class="animation" style="--i: 0; --j: 20">Welcome Back!</h2>
+        <p class="animation" style="--i: 1; --j: 21">
+          Login to continue where you left off. Your secure connection starts
+          here.
+        </p>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form-box register">
+        <h2 class="title animation" style="--i: 17; --j: 0">Sign Up</h2>
+
+        <form
+          action="signup.php"
+          method="POST"
+          onsubmit="return validateSignupForm()"
+        >
+          <!-- Added onsubmit event -->
+
+          <div class="input-box animation" style="--i: 18; --j: 1">
+            <input type="text" name="username" required minlength="3" />
+            <!-- Added minlength for username -->
+            <label for="">Username</label>
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box animation" style="--i: 19; --j: 2">
+            <input type="email" name="email" required />
+            <!-- Email validation is handled by type="email" -->
+            <label for="">Email</label>
+            <i class="bx bxs-envelope"></i>
+          </div>
+
+          <div class="input-box animation" style="--i: 20; --j: 3">
+            <input type="password" name="password" required minlength="6" />
+            <!-- Added minlength for password -->
+            <label for="">Password</label>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+
+          <button type="submit" class="btn animation" style="--i: 21; --j: 4">
+            Sign Up
+          </button>
+
+          <div class="linkTxt animation" style="--i: 22; --j: 5">
+            <p>
+              Already have an account? <a href="#" class="login-link">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="info-text register">
+        <h2 class="animation" style="--i: 17; --j: 0">Join Us Today!</h2>
+        <p class="animation" style="--i: 18; --j: 1">
+          Unlock New Opportunities with a Simple Signup.
+        </p>
+      </div>
+    </div>
+
+    <!--Script.js-->
+    <script src="login.js"></script>
+  </body>
+</html>
