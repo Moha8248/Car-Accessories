@@ -38,7 +38,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - AutoGear</title>
+    <title>Contact Us - MOHAN CAR ACCESSORIES</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
         :root {
@@ -264,7 +264,7 @@ $conn->close();
 <body>
     <!-- Start Header/Navigation -->
     <div class="navbar">
-        <div class="logo">AutoGear</div>
+        <div class="logo">MOHAN CAR ACCESSORIES</div>
         <ul>
             <li><a href="index.html"> Home </a></li>
             <li><a href="User/view_products.php"> Shop </a></li>
@@ -310,7 +310,7 @@ $conn->close();
             <div class="info-box">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Address</h3>
-                <p>1/108 AutoGear KKP, Karur, Tamilnadu 621313</p>
+                <p>1/108 MOHAN CAR ACCESSORIES KKP, Karur, Tamilnadu 621313</p>
             </div>
             <div class="info-box">
                 <i class="fas fa-phone"></i>
@@ -320,13 +320,13 @@ $conn->close();
             <div class="info-box">
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
-                <p>support@autogear.com</p>
+                <p>support@mohancaraccessories.com</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 AutoGear. All rights reserved.</p>
+        <p>&copy; 2024 MOHAN CAR ACCESSORIES. All rights reserved.</p>
     </footer>
 </body>
 </html>

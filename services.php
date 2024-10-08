@@ -53,7 +53,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - AutoGear</title>
+    <title>Services - MOHAN CAR ACCESSORIES</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -267,7 +267,7 @@ $conn->close();
 
 <!-- Start Header/Navigation -->
 <div class="navbar">
-    <div class="logo">AutoGear</div>
+    <div class="logo">MOHAN CAR ACCESSORIES</div>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="User/view_products.php">Shop</a></li>
@@ -368,7 +368,7 @@ $conn->close();
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2024 AutoGear. All Rights Reserved.</p>
+    <p>&copy; 2024 MOHAN CAR ACCESSORIES. All Rights Reserved.</p>
 </footer>
 
 <!-- Font Awesome for Icons -->

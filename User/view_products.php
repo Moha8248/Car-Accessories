@@ -160,7 +160,7 @@ $result = $conn->query($sql);
 <body>
     <!-- Start Header/Navigation -->
     <div class="navbar">
-        <div class="logo">AutoGear</div>
+        <div class="logo">MOHAN CAR ACCESSORIES</div>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a class="active" href="#">Shop</a></li>

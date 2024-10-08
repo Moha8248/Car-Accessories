@@ -280,7 +280,7 @@ mysqli_close($conn);
 <body>
     <!-- Your HTML structure here -->
     <div class="navbar">
-        <div class="logo">AutoGear</div>
+        <div class="logo">MOHAN CAR ACCESSORIES</div>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a class="active" href="#">Shop</a></li>
