@@ -89,7 +89,7 @@ $recentPaymentsResult = $conn->query($recentPaymentsQuery);
   </div>
 
   <!-- Main Content -->
-  <div class="main-content">
+  <div class="main-content"> 
     <div class="header">
       <h1>Welcome, Admin</h1>
       <div class="logout">

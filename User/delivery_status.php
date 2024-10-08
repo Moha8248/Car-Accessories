@@ -4,7 +4,7 @@ require '../db.php'; // Ensure your DB connection is included
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../Login-Signup/login.php"); // Redirect to login if not logged in
+    header("Location: ../Login-Signup/login.html"); // Redirect to login if not logged in
     exit();
 }
 
@@ -120,7 +120,7 @@ $result = $stmt->get_result();
                         <?php echo htmlspecialchars($row['delivery_status']); ?>
                     </td>
                     <td>
-                        <?php echo htmlspecialchars($row['payment_status'] == 'paid' ? 'Paid' : 'Not Paid'); ?>
+                    <?php echo htmlspecialchars(strcasecmp($row['payment_status'], 'paid') === 0 ? 'Paid' : 'Not Paid'); ?>
                     </td>
                 </tr>
                 <?php endwhile; ?>
