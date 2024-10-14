@@ -9,7 +9,7 @@ if (isset($_GET['search'])) {
 }
 
 // Fetch products from the database
-$sql = "SELECT * FROM products WHERE name LIKE '%" . $conn->real_escape_string($searchQuery) . "%' ORDER BY category";
+$sql = "SELECT * FROM products WHERE name LIKE '%" . $conn->real_escape_string($searchQuery) . "%' OR category LIKE '%" . $conn->real_escape_string($searchQuery) . "%' ORDER BY category";
 $result = $conn->query($sql);
 ?>
 
@@ -21,77 +21,69 @@ $result = $conn->query($sql);
     <title>Car Accessories Shop</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <style>
-       body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #f8f8f8;
             margin: 0;
             padding: 0;
         }
-/* Navbar */
-.navbar {
-    background-color: #3a6ea5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    color: #ffffff;
-}
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffd700;
-}
-.navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-.navbar ul li {
-    margin: 0 20px;
-}
-.navbar ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-.navbar ul li a:hover {
-    color: #ffd700; /* Change color on hover */
-}
-.navbar ul li a.active {
-    border-bottom: 2px solid #ffd700;
-}
-.navbar .search-bar {
-    flex-grow: 1;
-    margin: 0 20px;
-}
-.navbar .search-bar input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-.navbar .search-bar button {
-    padding: 10px;
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.icons {
-    display: flex;
-    align-items: center;
-}
-.icons a {
-    color: #ffffff;
-    margin-left: 15px; /* Add spacing between icons */
-    text-decoration: none;
-}
-.icons a:hover {
-    color: #ffd700; /* Change color on hover */
-}
+        /* Navbar */
+        .navbar {
+            background-color: #3a6ea5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            color: #ffffff;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ffd700; /* Change color on hover */
+        }
+        .navbar ul li a.active {
+            border-bottom: 2px solid #ffd700;
+        }
+        .navbar .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .navbar .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+        .icons a {
+            color: #ffffff;
+            margin-left: 15px; /* Add spacing between icons */
+            text-decoration: none;
+        }
+        .icons a:hover {
+            color: #ffd700; /* Change color on hover */
+        }
 
         /* Container for products */
         .container {
@@ -156,6 +148,20 @@ $result = $conn->query($sql);
             background-color: #16a085;
         }
     </style>
+    <script>
+        function searchProducts() {
+            const searchQuery = document.getElementById('search').value;
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'search_products.php?search=' + encodeURIComponent(searchQuery), true);
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    document.querySelector('.container').innerHTML = this.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
 </head>
 <body>
     <!-- Start Header/Navigation -->
@@ -171,18 +177,13 @@ $result = $conn->query($sql);
 
         <!-- Search Bar in Navbar -->
         <div class="search-bar">
-            <form action="view_product.php" method="GET">
-                <input type="text" name="search" placeholder="Search for car accessories..." value="<?php echo htmlspecialchars($searchQuery); ?>"/>
-                <button type="submit">Search</button>
-            </form>
+            <input type="text" id="search" placeholder="Search for car accessories..." value="<?php echo htmlspecialchars($searchQuery); ?>" oninput="searchProducts()" />
         </div>
 
         <div class="icons">
             <a href="../redirect.php" title="Profile"><i class="fas fa-user"></i></a>
             <a href="cart.php" title="Shopping Cart"><i class="fas fa-shopping-cart"></i></a>
-            <a href="delivery_status.php" title="Delivery Status">
-          <i class="fas fa-truck"></i>
-        </a>
+            <a href="delivery_status.php" title="Delivery Status"><i class="fas fa-truck"></i></a>
             <a href="../Login-Signup/logout.php" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
         </div>
     </div>
@@ -203,7 +204,7 @@ $result = $conn->query($sql);
                     echo "<div class='categories'>";
                 }
 
-                // Display each product card wrapped in a link to product_details.php
+                // Display each product card
                 echo "<div class='card'>
                         <a href='product_details.php?product_id=" . htmlspecialchars($row['id']) . "'>
                             <img src='data:image/jpeg;base64," . base64_encode($row['image']) . "' alt='" . htmlspecialchars($row['name']) . "'/>
@@ -231,12 +232,11 @@ $result = $conn->query($sql);
             }
             echo "</div>"; // Close the last category div
         } else {
-            echo "<p>No products found.</p>";
+            echo "<p>No products found. Try searching with different terms or check back later as we update our inventory frequently!</p>";
         }
 
         $conn->close();
         ?>
     </div>
-
 </body>
 </html>

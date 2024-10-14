@@ -232,15 +232,6 @@ $conn->close();
             color: #fff;
         }
 
-        footer {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .service-box {
@@ -365,11 +356,6 @@ $conn->close();
         <?php endif; ?>
     </div>
 </div>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 MOHAN CAR ACCESSORIES. All Rights Reserved.</p>
-</footer>
 
 <!-- Font Awesome for Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

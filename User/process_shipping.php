@@ -131,21 +131,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .radio-group label {
             margin-right: 10px;
         }
-
-        .form-footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .form-footer a {
-            color: #1abc9c;
-            text-decoration: none;
-        }
-
-        .form-footer a:hover {
-            text-decoration: underline;
-        }
-
     </style>
 </head>
 <body>

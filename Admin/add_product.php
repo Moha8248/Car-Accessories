@@ -43,8 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "New product added successfully!";
+        echo '<br><a href="add_product.php"><button>Add Another Product</button></a>';
+        echo '<br><a href="inventory.php"><button>View Inventory</button></a>';
+        
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
+        echo '<br><a href="inventory.php"><button>Go TO Inventry</button></a>';
     }
 }
 ?>

@@ -238,21 +238,6 @@ $conn->close();
             line-height: 1.6;
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 14px;
-        }
-
         /* Media Queries */
         @media (max-width: 768px) {
             .contact-form {
@@ -324,9 +309,5 @@ $conn->close();
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 MOHAN CAR ACCESSORIES. All rights reserved.</p>
-    </footer>
 </body>
 </html>
